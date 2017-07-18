@@ -5,8 +5,7 @@
   "main": "index.js",
   "scripts": {
     "clean": "rimraf dist",
-    "build": "NODE_ENV=production npm run clean && webpack -p",
-    "dev": "nodemon server.js"
+    "dev": "webpack-dev-server"
   },
   "author": "",
   "license": "ISC",
@@ -15,11 +14,13 @@
     "babel-core": "^6.7.2",
     "babel-loader": "^6.2.4",
     "babel-plugin-transform-class-properties": "^6.22.0",
+    "babel-plugin-transform-object-rest-spread": "^6.23.0",
     "babel-preset-env": "^1.1.8",
     "babel-preset-react": "^6.5.0",
     "css-loader": "^0.26.1",
-    "express": "^4.14.0",
     "html-webpack-plugin": "^2.26.0",
+    "node-sass": "^4.5.3",
+    "prop-types": "^15.5.10",
     "react": "^15.4.1",
     "react-dom": "^15.4.1",
     "react-redux": "^4.4.1",
@@ -27,6 +28,7 @@
     "redux": "^3.3.1",
     "redux-promise": "^0.5.3",
     "rimraf": "^2.5.4",
+    "sass-loader": "^6.0.6",
     "style-loader": "^0.13.1",
     "url-loader": "^0.5.7",
     "webpack": "^2.2.0-rc.0"

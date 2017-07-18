@@ -9,7 +9,7 @@ const VENDOR_LIBS = [
 
 module.exports = {
   entry: {
-    bundle: './client/src/index.js',
+    bundle: './src/index.js',
     vendor: VENDOR_LIBS
   },
   output: {
@@ -24,8 +24,8 @@ module.exports = {
         exclude: /node_modules/
       },
       {
-        use: ['style-loader', 'css-loader'],
-        test: /\.css$/
+        use: ['style-loader', 'css-loader', "sass-loader"],
+        test: /\.scss$/
       },
       {
         test: /\.(jpe?g|png|gif|svg|)$/,
@@ -47,7 +47,7 @@ module.exports = {
       'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV)
     }),
     new HtmlWebpackPlugin({
-      template: './client/src/index.html'
+      template: './src/index.html'
     })
   ],
   devServer: {
